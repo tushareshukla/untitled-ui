@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
-import RouteTree from "../routes/RouteTree";
+import RouteTree from "./routes/RouteTree";
+
 
 function App() {
   return (
