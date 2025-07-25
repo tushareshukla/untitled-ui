@@ -6,7 +6,7 @@ import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { BackgroundPattern } from "@/components/shared-assets/background-patterns";
 import { cx } from "@/utils/cx";
-// import { LogoMark } from "./logomark";
+import { LogoMark } from "./LogoMark";
 
 
 const tabs = [
@@ -19,7 +19,6 @@ const tabs = [
         label: "Log in",
     },
 ];
-
 export const SignupSimple = () => {
     const [password, setPassword] = useState("");
 
@@ -30,8 +29,8 @@ export const SignupSimple = () => {
                     <div className="relative">
                         <BackgroundPattern pattern="grid" className="absolute top-1/2 left-1/2 z-0 hidden -translate-x-1/2 -translate-y-1/2 md:block" />
                         <BackgroundPattern pattern="grid" size="md" className="absolute top-1/2 left-1/2 z-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />
-                        {/* <LogoMark size="lg" className="relative z-10 max-md:hidden" /> */}
-                        {/* <LogoMark size="md" className="relative z-10 md:hidden" /> */}
+                        <LogoMark size="lg" className="relative z-10 max-md:hidden" />
+                        <LogoMark size="md" className="relative z-10 md:hidden" />
                     </div>
                     <div className="z-10 flex flex-col gap-2 md:gap-3">
                         <h1 className="text-display-xs font-semibold text-primary md:text-display-sm">Create an account</h1>
