@@ -1,5 +1,5 @@
+import { useAuthStore } from "@/shared/state/auth.store";
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuthStore } from "../shared/state/auth.store";
 
 export default function ProtectedLayout() {
 	const { isAuthenticated } = useAuthStore();
