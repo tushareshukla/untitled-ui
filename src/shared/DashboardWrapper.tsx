@@ -7,13 +7,18 @@ interface DashboardWrapperProps {
   noPadding?: boolean;
 }
 
-export const DashboardWrapper: FC<DashboardWrapperProps> = ({ children, className, noPadding = false }) => {
+export const DashboardWrapper: FC<DashboardWrapperProps> = ({
+  children,
+  className,
+  noPadding = false,
+}) => {
   return (
     <div
       className={cx(
-        "w-full",
-        noPadding ? "" : "px-4 sm:px-6 lg:px-8",               
-        noPadding ? "" : "sm:py-6 lg:py-8",                
+        "w-full min-h-screen",
+        "bg-bg-secondary",
+        noPadding ? "" : "px-4 sm:px-6 lg:px-8",
+        noPadding ? "" : "sm:py-6 lg:py-8",
         "max-w-screen-2xl mx-auto",
         className,
       )}
