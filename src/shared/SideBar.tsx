@@ -11,6 +11,7 @@ import {
 import type { NavItemType } from "@/components/application/app-navigation/config";
 import { SidebarNavigationSimple } from "@/components/application/app-navigation/sidebar-navigation/sidebar-simple";
 import { BadgeWithDot } from "@/components/base/badges/badges";
+import { useLocation } from "react-router-dom";
 
 const navItemsSimple: NavItemType[] = [
     {
@@ -48,13 +49,17 @@ const navItemsSimple: NavItemType[] = [
     },
 ];
 
-export const SidebarNavigation = () => (
-    <SidebarNavigationSimple
-        items={navItemsSimple}
-        footerItems={[
-            {
-                label: "Settings",
-                href: "/settings",
+export const SidebarNavigation = () => { 
+    const location = useLocation();
+     const pathname = location.pathname;
+    return (
+        <SidebarNavigationSimple
+         activeUrl={pathname}
+            items={navItemsSimple}
+            footerItems={[
+                {
+                    label: "Settings",
+                    href: "/settings",
                 icon: Settings01,
             },
             {
@@ -69,4 +74,4 @@ export const SidebarNavigation = () => (
             },
         ]}
     />
-);
+   ) };
