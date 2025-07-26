@@ -19,9 +19,9 @@ export default function RouteTree() {
 			],
 		},
 		{
-			path: "/app",
+			path: "/",
 			element: <ProtectedLayout />,
-			// children: [{ path: "/dashboard", element: <Dashboard /> }],
+			children: [{ path: "dashboard", element: <Dashboard /> }],
 		},
 	]);
 }
