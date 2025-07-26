@@ -24,7 +24,7 @@ const navItemsSimple: NavItemType[] = [
         href: "/events",
         icon: Calendar,
         items: [
-            { label: "All Events", href: "/events/all" },
+            { label: "All Events", href: "/events" },
 			{ label: "Create Event", href: "/events/create" },
         ],
     },
