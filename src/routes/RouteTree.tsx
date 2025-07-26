@@ -6,6 +6,7 @@ import ProtectedLayout from "../layouts/ProtectedLayout";
 import Dashboard from "../modules/dashboard/DashboardPage";
 import { LoginSimple } from "@/features/auth/views/Login";
 import { SignupSimple } from "@/features/auth/views/SignUp";
+import { NotFound } from "@/pages/not-found";
 
 export default function RouteTree() {
 	return useRoutes([
@@ -22,6 +23,10 @@ export default function RouteTree() {
 			path: "/",
 			element: <ProtectedLayout />,
 			children: [{ path: "dashboard", element: <Dashboard /> }],
+		},
+		{
+		path: "*",
+		element: <NotFound />,
 		},
 	]);
 }
